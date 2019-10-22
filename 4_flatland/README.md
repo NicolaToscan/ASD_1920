@@ -16,7 +16,7 @@ La struttura di una sequnza sarà dunque:
 ## Teorema
 In una sequenza `X --- O --- X`, `O` può rimanere se e solo se `X---` e `---X` possono essere eliminati indipendentemente.
 
-`X ---` è eliminabile se e solo se:
+`X ---` è eliminabile :
 1. `X---` è un numero pari di triangoli
 2. `---` è in una delle seguenti forme:
    - `---<`
@@ -26,12 +26,15 @@ In una sequenza `X --- O --- X`, `O` può rimanere se e solo se `X---` e `---X` 
 
 ## Dimostrazione
 
-### 1. `X---` numero pari
+### Dimosrazione ==>
+
+#### 1. `X---` numero pari
 Per assurdo `X---` è un numero 2n + 1 di triangoli, riduco n volte in modo arbitrario, deve essere sempre possibile rimuovere due elementi.
 
 Dopo n passaggi si raggiungerà una lunghezza di 1 che è impossibile da eliminare perchè solo.
 
-### 2a. `X --- <`  sempre eliminabile
+
+#### 2a. `X --- <`  sempre eliminabile
 La sequenza è nella forma `X --- <` con `---` numero N pari di triangoli
 
 Se N = 0 allora si ha `X<` che è sempre eliminabile
@@ -49,7 +52,7 @@ Ridudcendolo a N - 2
 
 Si può dunque ripetere fino a raggingere N = 0, ed è quindi sempre risolvibile
 
-### 2b. `X ---- <> ---`  sempre eliminabile
+#### 2b. `X ---- <> ---`  sempre eliminabile
 Se la sequenza presenta `X ---- <> ---` con `----` pari e `---` dispari,possimao dividere il problema cercando di eliminare `X----<` e `>---` con entrami numero pari di triangoli.
 - `X----<` risolvibile per (2a)
 - `>---` può essere visto come `>---X` e dunque risolvibile per simmetria di (2a)
@@ -57,7 +60,9 @@ Se la sequenza presenta `X ---- <> ---` con `----` pari e `---` dispari,possimao
 Quindi la forma `X ---- <> ---` è sempre eliminabile
 
 
-### 3. `X ---- <> ---` e `X --- <`  non presenti
+### Dimostrazione <==
+Se la sequenza è dispari è impossibile per (1).
+
 Se la sequenza non presenta `X ---- <> ---` e `X --- <` possiamo raffigurarla con `X--->` con `---` N pari di triangoli
 
 Se N = 0 si ha `X>` che è impossibile
