@@ -1,85 +1,86 @@
 # FLATLAND
+Si presuppone la conoscienza del problema illustrato [qui](https://github.com/NicolaToscan/ASD_1920/blob/master/4_flatland/flatland%20(it).pdf).
 
-## Notazione
+## Notazione e terminologia
 | Simbolo | Description |
 | ----------- | ----------- |
 | X | Testa o coda della sequenza |
 | --- | Insieme di N  triangoli |
 | < | Traingolo che punta a sinistra |
 | > | Traingolo che punta a destra |
-| O | Elemento di cui voglio verificare se rimane |
+| T | Traingolo generico |
 
-La struttura di una sequnza sarà dunque:
+| Termine | Significato |
+| ----------- | ----------- |
+| RIDUZIONE | Eliminazione di due triangoli come illustrato nelle regole |
+| SEQUENZA RIDUCIBILE | La sequenza può essere portata a lunghezza 0 dopo un certo numero di riduzioni senza l'eliminazione di elementi esterni alla sequenza
 
-`X --- O --- X`
+La struttura di una qualunquesequnza sarà dunque:
+
+`X --- X`
 
 ## Teorema
-In una sequenza `X --- O --- X`, `O` può rimanere se e solo se `X---` e `---X` possono essere eliminati indipendentemente.
+In una sequenza `X --- T --- X`, con `T` può appartenere alla soluzione se e solo se `X---` e `---X` possono entrambi essere riducibile indipendentemente.
 
-`X ---` è eliminabile :
+`X ---` è riducibile se e solo se:
 1. `X---` è un numero pari di triangoli
-2. `---` è in una delle seguenti forme:
-   - `---<`
-   - `--- <> ---` con `---` numero pari di triangoli
+2. `X ---` è in una delle seguenti forme:
+   - `X --- <`
+   - `X --- <> --- <` con `---` numero pari di triangoli
 
-`--- X` verificabile come prima per simmetria.
+(Uguale per simmetria su `--- X`).
 
 ## Dimostrazione
+<!-- dim che devono essere eliminate ind. -->
 
-### Dimosrazione ==>
+### 1. Se `X---` non è pari T non appartine alla soluzione
+Ipotizando per assurdo che `X---` è formato da 2n + 1 triangoli, tentando di ridurre n volte si possono verificare le seguenti condizioni:
+- Impossibile eseguire una riduzione su `X---`
+- Dopo n eliminazioni si rimane con un solo triangolo che non può essere eliminato
 
-#### 1. `X---` numero pari
-Per assurdo `X---` è un numero 2n + 1 di triangoli, riduco n volte in modo arbitrario, deve essere sempre possibile rimuovere due elementi.
-
-Dopo n passaggi si raggiungerà una lunghezza di 1 che è impossibile da eliminare perchè solo.
+In entrambi i casi è impossibile ridurre completamente la sequenza.
 
 
-#### 2a. `X --- <`  sempre eliminabile
-La sequenza è nella forma `X --- <` con `---` numero N pari di triangoli
+### 2a. Se nella forma `X --- <` è  sempre riducibile
+La sequenza è nella forma `X --- <` con `---` numero N pari di triangoli per (1).
 
-Se N = 0 allora si ha `X<` che è sempre eliminabile
+**Se N = 0** `X<` è riducibile.
 
-Se N >= 2 analizando gli ultimi 3 elementi si ha:
-
-| Forma iniziale | Possibile semplificazione |
+**Se N >= 2** analizando gli ultimi 3 triangoli di `X---<` si può applicare una delle seguenti riduzioni:
+| Forma iniziale | Forma dopo riduzione |
 | ----------- | ----------- |
-| `<<<` | `<` |
-| `<><` | `<` |
-| `><<` | `<` |
-| `>><` | `<` |
+| `X---<<<` | `X---<` |
+| `X---<><` | `X---<` |
+| `X---><<` | `X---<` |
+| `X--->><` | `X---<` |
 
-Ridudcendolo a N - 2
+Procedendo cosi N/2 volte si raggiungerà il caso N = 0 e dunque abbiamo una possibile serie di riduzione che risolvono la sottosequenza.
 
-Si può dunque ripetere fino a raggingere N = 0, ed è quindi sempre risolvibile
+### 2b. Se nella forma `X---<>--->` con --- pari è sempre eliminabile
+Se la sequenza presenta `X---<>--->` con `---` pari, dividiamo il problema cercando di eliminare `X---<` e `>---<`.
+- `X----<` risolvibile per (2a).
+- `>--->` può essere visto come `>---X` e dunque risolvibile per simmetria di (2a).
 
-#### 2b. `X ---- <> ---`  sempre eliminabile
-Se la sequenza presenta `X ---- <> ---` con `----` pari e `---` dispari,possimao dividere il problema cercando di eliminare `X----<` e `>---` con entrami numero pari di triangoli.
-- `X----<` risolvibile per (2a)
-- `>---` può essere visto come `>---X` e dunque risolvibile per simmetria di (2a)
-
-Quindi la forma `X ---- <> ---` è sempre eliminabile
+Quindi la forma `X---<>--->` è sempre eliminabile.
 
 
-### Dimostrazione <==
-Se la sequenza è dispari è impossibile per (1).
+### Se (2a) o (2b) non presenti non risolvibile
+Se la sequenza non presenta `X---<>--->` e `X---<` possiamo raffigurarla con `X--->` con `---` N pari di triangoli.
 
-Se la sequenza non presenta `X ---- <> ---` e `X --- <` possiamo raffigurarla con `X--->` con `---` N pari di triangoli
+**Se N = 0** si ha `X>` che è impossibile.
 
-Se N = 0 si ha `X>` che è impossibile
+**Se N = 2** possiamo avere
 
-Se N = 2 possiamo avere
+|   | Forma iniziale | Tutte le possibile semplificazione | Risultato finale |
+| - | ----------- | ----------- | ----------- |
+| 1 | `X<<>` | `X>`, `<>` | Impossibile da risolvere |
+| 2 | `X<>>` | `>>`, `X<` | Possibile da risolvere |
+| 3 | `X><>` | `X>` | Impossibile da risolvere |
+| 4 | `X>>>` |  `X>` | Impossibile da risolvere |
 
-| Forma iniziale | Tutte le possibile semplificazione | Risultato finale |
-| ----------- | ----------- | ----------- |
-| `X<<>` | `X>`, `<>` | Impossibile da risolvere |
-| `X<>>` | `>>`, `X<` | POssibile da risolvere |
-| `X><>` | `X>` | Impossibile da risolvere |
-| `X>>>` |  `X>` | Impossibile da risolvere |
+L'unica disposizione che porta ad una soluzioe è la 2, ma deve essere esclusa perchè nella forma `X---<>--->`.
 
-Se N >= 4
-Per essere risolvibile deve essere ridotto a `X<>>`
-Se riusciamo ad ottenere un `X ---- <> ---` puo essere mantenuto fino ad ottenere `X<>>` e quindi la soluzione.
-
+**Se N >= 4**
 Prendendo una qualunque parte della sequenza di 4 elementi del tipo: `X---ABCD--->` dove `AB != <>` e `CD != <>` per ipotesi
 si può ridurre nel seguente modo:
 
@@ -95,4 +96,4 @@ si può ridurre nel seguente modo:
 | `><<<` | `<<`, `><` |
 | `><><` | `><` |
 
-In nessun caso è possibile ottenere un `<>` e ripetendo per abbastanza volta sarà impossibile raggiungere la forma `X<>>` per risolvere la sequenza
+Dopo N/2 - 1 riduzioni raggiungeremmmo la forma con N = 2, ma dato che nessuna delle riduzioni precedenti porta < `<>` sarà impossibile raggiungere la forma `X<>>` necessaria per la soluzione
