@@ -1,0 +1,129 @@
+Lei ha clacsonato
+
+    voglio N, Necchi come se fosse 0
+    mi porga N
+    voglio leftSD, Necchi come se fosse N
+    voglio rightSD, Necchi come se fosse -1
+
+    voglio d0, Necchi come se fosse 0
+    voglio d1, Necchi come se fosse 0
+    voglio d2, Necchi come se fosse 0
+
+    mi porga d0
+
+    voglio ii, Necchi come se fosse 1
+
+
+    stuzzica
+
+        che cos'è ii?
+            1:
+                mi porga d0
+            o tarapia tapioco:
+                d0 come se fosse d2
+        e velocità di esecuzione
+
+        mi porga d1
+        mi porga d2
+
+
+        che cos'è leftSD?
+            N:
+                che cos'è d0?
+                    1:
+                        che cos'è d1?
+                            0:
+                                leftSD come se fosse ii
+                        e velocità di esecuzione
+                e velocità di esecuzione
+        e velocità di esecuzione
+
+        che cos'è d1?
+            1:
+                che cos'è d2?
+                    0:
+                        rightSD come se fosse ii più 1
+                e velocità di esecuzione
+        e velocità di esecuzione
+
+
+        ii come se fosse ii più 2
+
+    e brematura anche, se ii minore di N meno 3
+
+    mi porga d0
+
+
+    8888888 a posterdati
+
+
+    voglio cPrev, Necchi come se fosse 1
+    voglio c, Necchi come se fosse 1
+    voglio cSucc, Necchi come se fosse 1
+
+    ii come se fosse 0
+
+    stuzzica
+        cPrev come se fosse cSucc
+        mi porga c
+
+
+        che cos'è ii?
+            minore di N meno 2:
+                mi porga cSucc
+            o tarapia tapioco:
+                cSucc come se fosse 0
+        e velocità di esecuzione
+        
+        voglio testL, Necchi come se fosse
+            brematurata la supercazzola checkL con ii, cPrev, leftSD, N o scherziamo?
+
+        voglio testR, Necchi come se fosse
+            brematurata la supercazzola checkR con ii, cSucc, leftSD, N o scherziamo?
+
+        che cos'è testR?
+            1:
+                che cos'è testL?
+                    1:
+                        10000 più ii a posterdati
+                e velocità di esecuzione
+        e velocità di esecuzione
+            
+            
+        ii come se fosse ii più 2
+    e brematura anche, se ii minore di N
+
+
+blinda la supercazzola Necchi checkL con iii Necchi, ccc Necchi, leftSD Necchi, N Necchi o scherziamo?
+    voglio res, Necchi come se fosse 0
+    che cos'è il iii?
+        0:
+            res come se fosse 1
+    e velocità di esecuzione
+    che cos'è il ccc?
+        1:
+            res come se fosse 1
+        e velocità di esecuzione
+    che cos'è il leftSD?
+        minore di iii meno 2:
+            res come se fosse 1
+        e velocità di esecuzione
+    
+    vaffanzum res!
+
+blinda la supercazzola Necchi checkR con iii Necchi, ccc Necchi, rightSD Necchi, N Necchi o scherziamo?
+    voglio res, Necchi come se fosse 0
+    che cos'è il iii?
+        N meno 1:
+            res come se fosse 1
+    e velocità di esecuzione
+    che cos'è il ccc?
+        0:
+            res come se fosse 1
+    e velocità di esecuzione
+    che cos'è il rightSD?
+        maggiore di iii più 2:
+            res come se fosse 1
+    e velocità di esecuzione
+    
+    vaffanzum res!

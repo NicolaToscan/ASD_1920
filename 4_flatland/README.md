@@ -5,7 +5,7 @@ Si presuppone la conoscienza del problema illustrato [qui](https://github.com/Ni
 | Simbolo | Description |
 | ----------- | ----------- |
 | X | Testa o coda della sequenza |
-| --- | Insieme di N  triangoli |
+| --- | Sequenza di N  triangoli |
 | < | Traingolo che punta a sinistra |
 | > | Traingolo che punta a destra |
 | T | Traingolo generico |
@@ -20,7 +20,7 @@ La struttura di una qualunquesequnza sarà dunque:
 `X --- X`
 
 ## Teorema
-In una sequenza `X --- T --- X`, con `T` può appartenere alla soluzione se e solo se `X---` e `---X` possono entrambi essere riducibile indipendentemente.
+In una sequenza `X --- T --- X`, con `T` può appartenere alla soluzione se e solo se `X---` e `---X` possono entrambi essere riducibili indipendentemente.
 
 `X ---` è riducibile se e solo se:
 1. `X---` è un numero pari di triangoli

@@ -1,0 +1,134 @@
+Lei ha clacsonato
+
+    voglio N, Necchi come se fosse 0
+    mi porga N                                                                                                  // in >> N
+    voglio leftSD, Necchi come se fosse N                                                                       // int leftSD = N
+    voglio rightSD, Necchi come se fosse -1                                                                     // int rightSD = -1
+            
+    voglio d0, Necchi come se fosse 0                                                                           // int d0 = -1
+    voglio d1, Necchi come se fosse 0                                                                           // int d1 = -1
+    voglio d2, Necchi come se fosse 0                                                                           // int d2 = -1
+            
+    mi porga d0                                                                                                 // in >> d0
+            
+    voglio ii, Necchi come se fosse 1                                                                           // int i = 0
+            
+            
+    stuzzica                                                                                                    // do
+            
+        che cos'è ii?                                                                                               // if (i == )
+            1:                                                                                                      // 1
+                mi porga d0                                                                                             // in >> d0
+            o tarapia tapioco:                                                                                      // else
+                d0 come se fosse d2                                                                                     // d0 = d2
+        e velocità di esecuzione                                                                
+            
+        mi porga d1                                                                                                 // in >> d1
+        mi porga d2                                                                                                 // in >> d2
+            
+            
+        che cos'è leftSD?                                                                                           // if (leftSD == N && d0 == 's' && d1 == 'd')
+            N:                                                                          
+                che cos'è d0?                                                   
+                    1:                                                  
+                        che cos'è d1?                                                   
+                            0:                                                  
+                                leftSD come se fosse ii                                                                 // leftSD = i
+                        e velocità di esecuzione                                                    
+                e velocità di esecuzione                                                    
+        e velocità di esecuzione                                                    
+            
+        che cos'è d1?                                                                                               // if  (d1 == 's' && d2 == 'd')
+            1:                                                                          
+                che cos'è d2?                                                   
+                    0:                                                  
+                        rightSD come se fosse ii più 1                                                                  // rightSD = i + 1
+                e velocità di esecuzione                                                    
+        e velocità di esecuzione                                                    
+            
+            
+        ii come se fosse ii più 2                                                                                    // i += 2
+            
+    e brematura anche, se ii minore di N meno 3                                                                 // while (i < N - 3)
+            
+    mi porga d0         
+            
+            
+    42069 a posterdati
+            
+            
+    voglio cPrev, Necchi come se fosse 1                                                                        // int cPrev = 1, c, cSucc = 1
+    voglio c, Necchi come se fosse 1            
+    voglio cSucc, Necchi come se fosse 1            
+            
+    ii come se fosse 0          
+            
+    stuzzica                                                                                                    // do
+        cPrev come se fosse cSucc           
+        mi porga c       
+        mi porga cSucc          
+            
+        voglio testL, Necchi come se fosse          
+            brematurata la supercazzola checkL con ii, cPrev, leftSD, N o scherziamo?                               // int testL = checkL()
+            
+        voglio testR, Necchi come se fosse          
+            brematurata la supercazzola checkR con ii, cSucc, leftSD, N o scherziamo?                               // int testR = checkR()
+
+        1000 più ii a posterdati     
+        che cos'è testR?
+            1:                                                                          
+                che cos'è testL?
+                    1:
+                        88888 a posterdati
+                e velocità di esecuzione                                      
+        e velocità di esecuzione
+            
+            
+        ii come se fosse ii più 2                                                                                   //i += 2
+    e brematura anche, se ii minore di N                                                                        // while (i < N - 3)
+
+
+
+
+
+blinda la supercazzola Necchi checkL con iii Necchi, ccc Necchi, leftSD Necchi, N Necchi o scherziamo?
+    voglio res, Necchi come se fosse 0
+
+    che cos'è il iii?
+        0:
+            res come se fosse 1
+    e velocità di esecuzione
+
+    che cos'è il ccc?
+        1:
+            res come se fosse 1
+        e velocità di esecuzione
+
+    che cos'è il leftSD?
+        minore di iii meno 2:
+            res come se fosse 1
+        e velocità di esecuzione
+    
+    vaffanzum res!
+
+
+blinda la supercazzola Necchi checkR con iii Necchi, ccc Necchi, rightSD Necchi, N Necchi o scherziamo?
+
+    voglio res, Necchi come se fosse 0
+
+    che cos'è il iii?
+        N meno 1:
+            res come se fosse 1
+    e velocità di esecuzione
+
+    che cos'è il ccc?
+        0:
+            res come se fosse 1
+    e velocità di esecuzione
+
+    che cos'è il rightSD?
+        maggiore di iii più 2:
+            res come se fosse 1
+    e velocità di esecuzione
+    
+    vaffanzum res!
