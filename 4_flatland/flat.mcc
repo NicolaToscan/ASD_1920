@@ -1,30 +1,30 @@
 Lei ha clacsonato
 
     voglio N, Necchi come se fosse 0
-    mi porga N                                                                                                  // in >> N
-    voglio leftSD, Necchi come se fosse N                                                                       // int leftSD = N
-    voglio rightSD, Necchi come se fosse -1                                                                     // int rightSD = -1
+    mi porga N                                     // in >> N
+    voglio leftSD, Necchi come se fosse N          // int leftSD = N
+    voglio rightSD, Necchi come se fosse -1        // int rightSD = -1
             
-    voglio d0, Necchi come se fosse 0                                                                           // int d0 = -1
-    voglio d1, Necchi come se fosse 0                                                                           // int d1 = -1
-    voglio d2, Necchi come se fosse 0                                                                           // int d2 = -1
+    voglio d0, Necchi come se fosse 0              // int d0 = -1
+    voglio d1, Necchi come se fosse 0              // int d1 = -1
+    voglio d2, Necchi come se fosse 0              // int d2 = -1
             
-    mi porga d0                                                                                                 // in >> d0
+    mi porga d0                                    // in >> d0
             
-    voglio ii, Necchi come se fosse 1                                                                           // int i = 0
+    voglio ii, Necchi come se fosse 1              // int i = 0
             
             
-    stuzzica                                                                                                    // do
+    stuzzica                                       // do
             
-        che cos'è ii?                                                                                               // if (i == )
-            1:                                                                                                      // 1
-                mi porga d0                                                                                             // in >> d0
-            o tarapia tapioco:                                                                                      // else
-                d0 come se fosse d2                                                                                     // d0 = d2
-        e velocità di esecuzione                                                                
+        che cos'è ii?                                  // if (i == )
+            1:                                         // 1
+                mi porga d0                                // in >> d0
+            o tarapia tapioco:                         // else
+                d0 come se fosse d2                        // d0 = d2
+        e velocità di esecuzione                  
             
-        mi porga d1                                                                                                 // in >> d1
-        mi porga d2                                                                                                 // in >> d2
+        mi porga d1                                    // in >> d1
+        mi porga d2                                    // in >> d2
             
             
         che cos'è leftSD?                                                                                           // if (leftSD == N && d0 == 's' && d1 == 'd')

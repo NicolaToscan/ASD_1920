@@ -1,0 +1,107 @@
+Lei ha clacsonato
+
+
+    in >> N;
+    leftSD = N;
+    rightSD = -1;
+
+    int d0 = 0
+    int d1 = 0
+    int d2 = 0
+
+    in >> d0;
+
+    int i = 1;
+
+
+    do
+
+        if (i == 1)
+            in >> d0;
+        else
+            d0 = d2;
+
+
+
+        in >> d1;
+        in >> d2;
+
+
+        if (leftSD == N && d0 == 's' && d1 == 'd')
+            leftSD = i;
+
+
+
+
+
+
+
+
+
+        if (d1 == 's' && d2 == 'd')
+            rightSD = i + 1;
+
+
+
+
+
+
+
+        i += 2
+
+    while (i < N - 3)
+
+
+
+
+----------------------------------------------
+
+
+    char cPrev = '2'
+    char c = '2'
+    char cSucc = '2'
+
+    i = 0
+
+    do 
+        cPrev = cSucc
+        in c
+
+
+        if (ii == N - 2)
+                in >> cSucc
+        else 
+            cSucc = 0
+
+
+
+
+        testL = checkL()
+
+        testR = checkR()
+
+
+        if (testR && testL)
+            out << ii
+            
+            
+        
+        
+
+
+
+        i += 2
+    while (ii < N)
+
+
+
+
+    //NOMI
+    N -> il neurologo
+    dX -> la scapolottinaX
+    leftSD ->
+    rightSD
+    ii -> il contabile
+    cPrev -> mino
+    c -> mano
+    cSucc -> mono
