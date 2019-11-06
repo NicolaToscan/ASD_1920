@@ -4,7 +4,7 @@ Si presuppone la conoscienza del problema illustrato [qui](https://github.com/Ni
 ## Notazione e terminologia
 | Simbolo | Description |
 | ----------- | ----------- |
-| X | Testa o coda della sequenza |
+| X | Triangolo non selezionabile per essere rimosso (testa o coda) |
 | --- | Sequenza da 0 a n triangoli |
 | < | Traingolo che punta a sinistra |
 | > | Traingolo che punta a destra |
@@ -28,9 +28,9 @@ dove la testa X è separata di n >= 0 triangoli da T e la coda X è separata di 
 
 
 ## Teorema
-In una sequenza `X --- T --- X`, `T` può appartenere alla soluzione se e solo se `X ---` e `--- X` possono entrambi essere annulabili indipendentemente.
+In una sequenza `X --- T --- X`, `T` può appartenere alla soluzione se e solo se `X ---` e `--- X` possono entrambi essere annullabili indipendentemente.
 
-`X ---` è annulabile se e solo se:
+`X ---` è annullabili se e solo se:
 1. `X ---` è un numero pari di triangoli
 2. `X ---` è in una delle seguenti forme:
    - `X --- <`
@@ -49,12 +49,12 @@ Ipotizando per assurdo che `X ---` è formato da 2n + 1 triangoli, tentando di r
 In entrambi i casi è impossibile ridurre completamente la sequenza.
 
 
-### 2a. Se nella forma `X --- <` è  sempre annulabile
+### 2a. Se nella forma `X --- <` è  sempre annullabili
 La sequenza è nella forma `X --- <` con `---` numero N pari di triangoli per (1).
 
-**Se N = 0** `X<` è annulabile.
+**Se N = 0** `X<` è annullabili.
 
-**Se N >= 2** analizando gli ultimi 3 triangoli di `X --- <` si può applicare una delle seguenti riduzioni:
+**Se N >= 2** analizzando gli ultimi 3 triangoli di `X --- <` si può applicare una delle seguenti riduzioni:
 
 | Forma iniziale | Forma dopo riduzione |
 | ----------- | ----------- |
@@ -80,7 +80,7 @@ Se la sequenza non presenta `X --- <> --- >` e `X --- <` possiamo raffigurarla c
 
 **Se N = 2** possiamo avere
 
-|   | Forma iniziale | Tutte le possibile semplificazione | Risultato finale |
+|   | Forma iniziale | Tutte le possibili semplificazione | Risultato finale |
 | - | ----------- | ----------- | ----------- |
 | 1 | `X<<>` | `X>`, `<>` | Impossibile da risolvere |
 | 2 | `X<>>` | `>>`, `X<` | Possibile da risolvere |
@@ -93,7 +93,7 @@ L'unica disposizione che porta ad una soluzioe è la 2, ma deve essere esclusa p
 Prendendo una qualunque parte della sequenza di 4 elementi del tipo: `X --- ABCD --- >` dove `AB != <>` e `CD != <>` per ipotesi
 si può ridurre nel seguente modo:
 
-| Forma iniziale | Tutte le possibile semplificazione |
+| Forma iniziale | Tutte le possibili semplificazione |
 | ----------- | ----------- |
 | `>>>>` | `>>` |
 | `>><<` | `>>`, `<<`, `><` |
@@ -105,4 +105,4 @@ si può ridurre nel seguente modo:
 | `><<<` | `<<`, `><` |
 | `><><` | `><` |
 
-Dopo N/2 - 1 riduzioni raggiungeremmmo la forma con N = 2, ma dato che nessuna delle riduzioni precedenti porta < `<>` sarà impossibile raggiungere la forma `X<>>` necessaria per la soluzione
+Dopo `N/2 - 1` riduzioni raggiungeremmmo la forma con N = 2, ma dato che nessuna delle riduzioni precedenti porta a `<>` sarà impossibile raggiungere la forma `X<>>` necessaria per la soluzione
