@@ -26,7 +26,7 @@ Durante il secondo inserimento verranno stampati i valori che compongono la solu
 ## Compilazione
 I file monicelli possono essere compilati in un container Docker.
 
-Per avviare il container si può usare:
+Per avviare il container si può usare il [DockerFile](https://github.com/NicolaToscan/ASD_1920/blob/master/4_flatland/monicelli/Dockerfile) presente nella repository nel seguente modo:
 
 ```
 docker build -t monicelli .
