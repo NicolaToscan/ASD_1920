@@ -1,8 +1,9 @@
 # Flatland in Monicelli
 
-## Cos'è monicelli
+## Cos'è Flatland e Monicelli
 Per maggiori informazioni su Monicelli consultare: https://github.com/esseks/monicelli
 
+Per maggiori informazioni su Flatland consultare: https://github.com/NicolaToscan/ASD_1920/tree/master/4_flatland
 ## I file
 | Nome File | Description |
 | ----------- | ----------- |
