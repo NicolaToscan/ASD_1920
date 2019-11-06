@@ -12,7 +12,7 @@ Per maggiori informazioni su Flatland consultare: https://github.com/NicolaTosca
 | [monicelli_flatland_mapping.txt](https://github.com/NicolaToscan/ASD_1920/blob/master/4_flatland/monicelli/monicelli_flatland_mapping.txt) | Mapping della versione monicelli in pseudo c++ |
 | [monicelli_flatland_mcc_mapped.mcc](https://github.com/NicolaToscan/ASD_1920/blob/master/4_flatland/monicelli/monicelli_flatland_mcc_mapped.mcc) | Versione scritta in monicelli affiancata al mapping |
 
-## Come fuinziona
+## Come funziona
 Per poter scrivere il programma in monicelli sono dovuto scendere a dei compromessi:
 - L'input dei dati sarà chiesto due volte
 - L'output dei valori rimanenti sarà dato contemporaneamente all'inserimento
