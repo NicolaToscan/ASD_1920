@@ -6,11 +6,15 @@ Per maggiori informazioni su Monicelli consultare: https://github.com/esseks/mon
 ## Compilazione
 I file monicelli possono essere compilati in un container Docker.
 
-`docker build -t monicelli .`
+Per avviare il container si può usare:
 
-`docker run --rm -it -v /path/to/local/folder:/data monicelli`
+```
+docker build -t monicelli .
+docker run --rm -it -v /path/to/local/folder:/data monicelli
+```
 
-Avviato il container, nella directory data si potranno vedere i file presenti nella cartella locale e compilarli con
+Ora nella directory `/data` si potranno vedere i file presenti nella cartella locale e compilarli con
 
-`mcc nomefile.mcc`
-
+```
+mcc nomefile.mcc
+```
