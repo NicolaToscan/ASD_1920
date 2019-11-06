@@ -1,4 +1,4 @@
-Lei ha clacsonato
+int main()
 
 
     in >> N;
@@ -99,9 +99,15 @@ Lei ha clacsonato
     //NOMI
     N -> il neurologo
     dX -> la scapolottinaX
-    leftSD ->
-    rightSD
+    leftSD -> antani
+    rightSD -> postani
     ii -> il contabile
     cPrev -> mino
     c -> mano
     cSucc -> mono
+    checkL -> prema
+    checkR -> posma
+
+    testL -> testani
+    testR -> testoni
+    
