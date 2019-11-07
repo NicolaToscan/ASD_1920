@@ -1,0 +1,128 @@
+Lei ha clacsonato
+
+    voglio la Emma, Necchi come se fosse 0
+    mi porga la Emma
+    voglio pastolesto, Necchi come se fosse la Emma
+    voglio la coop, Necchi come se fosse -1
+
+    voglio povo0, Necchi come se fosse 0
+    voglio povo1, Necchi come se fosse 0
+    voglio povo2, Necchi come se fosse 0
+
+    mi porga povo0
+
+    voglio intornino, Necchi come se fosse 1
+
+
+    stuzzica
+
+        che cos'è intornino?
+            1:
+                mi porga povo0
+            o tarapia tapioco:
+                povo0 come se fosse povo2
+        e velocità di esecuzione
+
+        mi porga povo1
+        mi porga povo2
+
+
+        che cos'è pastolesto?
+            la Emma:
+                che cos'è povo0?
+                    1:
+                        che cos'è povo1?
+                            0:
+                                pastolesto come se fosse intornino
+                        e velocità di esecuzione
+                e velocità di esecuzione
+        e velocità di esecuzione
+
+        che cos'è povo1?
+            1:
+                che cos'è povo2?
+                    0:
+                        la coop come se fosse intornino più 1
+                e velocità di esecuzione
+        e velocità di esecuzione
+
+
+        intornino come se fosse intornino più 2
+
+    e brematura anche, se intornino minore di la Emma meno 3
+
+    mi porga povo0
+
+
+    8888888 a posterdati
+
+    povo0 come se fosse 1
+    povo1 come se fosse 1
+    povo2 come se fosse 1
+
+    intornino come se fosse 0
+
+    stuzzica
+        povo0 come se fosse povo2
+        mi porga povo1
+
+
+        che cos'è intornino?
+            minore di la Emma meno 2:
+                mi porga povo2
+            o tarapia tapioco:
+                povo2 come se fosse 0
+        e velocità di esecuzione
+        
+        voglio stellina, Necchi come se fosse
+            brematurata la supercazzola vietnam con intornino, povo0, il pastolesto, la Emma o scherziamo?
+
+        voglio cuoricino, Necchi come se fosse
+            brematurata la supercazzola cinquebarra con intornino, povo2, la coop, la Emma o scherziamo?
+
+        che cos'è cuoricino?
+            1:
+                che cos'è stellina?
+                    1:
+                        10000 più intornino a posterdati
+                e velocità di esecuzione
+        e velocità di esecuzione
+            
+            
+        intornino come se fosse intornino più 2
+    e brematura anche, se intornino minore di la Emma
+
+
+blinda la supercazzola Necchi vietnam con intornino Necchi, povo Necchi, il pastolesto Necchi, la Emma Necchi o scherziamo?
+    voglio la soluz, Necchi come se fosse 0
+    che cos'è intornino?
+        0:
+            la soluz come se fosse 1
+    e velocità di esecuzione
+    che cos'è il povo?
+        1:
+            la soluz come se fosse 1
+        e velocità di esecuzione
+    che cos'è il pastolesto?
+        minore di intornino meno 2:
+            la soluz come se fosse 1
+    e velocità di esecuzione
+    
+    vaffanzum la soluz!
+
+blinda la supercazzola Necchi cinquebarra con intornino Necchi, povo Necchi, la coop Necchi, la Emma Necchi o scherziamo?
+    voglio la soluz, Necchi come se fosse 0
+    che cos'è intornino?
+        la Emma meno 1:
+            la soluz come se fosse 1
+    e velocità di esecuzione
+    che cos'è il povo?
+        0:
+            la soluz come se fosse 1
+    e velocità di esecuzione
+    che cos'è il coop?
+        maggiore di intornino più 1:
+            la soluz come se fosse 1
+    e velocità di esecuzione
+    
+    vaffanzum la soluz!

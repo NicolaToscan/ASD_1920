@@ -79,7 +79,7 @@ Lei ha clacsonato
             brematurata la supercazzola checkL con ii, cPrev, leftSD, N o scherziamo?
 
         voglio testR, Necchi come se fosse
-            brematurata la supercazzola checkR con ii, cSucc, leftSD, N o scherziamo?
+            brematurata la supercazzola checkR con ii, cSucc, rightSD, N o scherziamo?
 
         che cos'è testR?
             1:
@@ -122,7 +122,7 @@ blinda la supercazzola Necchi checkR con iii Necchi, ccc Necchi, rightSD Necchi,
             res come se fosse 1
     e velocità di esecuzione
     che cos'è il rightSD?
-        maggiore di iii più 2:
+        maggiore di iii più 1:
             res come se fosse 1
     e velocità di esecuzione
     

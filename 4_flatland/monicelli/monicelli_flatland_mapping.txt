@@ -111,3 +111,21 @@ int main()
     testL -> testani
     testR -> testoni
     
+
+
+    //NOMI POVO
+    dX -> povoX
+    N -> la Emma
+
+    leftSD -> il pastolesto
+    rightSD -> la coop
+
+    checkL -> il vietnam
+    checkR -> il cinquebarra
+    
+    res -> la soluz
+
+    ii -> intornino
+    testL -> stellina
+    testR -> cuoricino
+

@@ -73,5 +73,6 @@ bool checkL(int i, char c)
 
 bool checkR(int i, char c)
 {
+    cout << (rightSD >= i + 2 ? "SI" : "NO") << endl;
     return ((i == N - 1) || (c == 'd') || (rightSD >= i + 2));
 }
