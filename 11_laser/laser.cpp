@@ -3,6 +3,10 @@
 #include <utility>
 #include <vector>
 #include <utility>
+#include <queue>
+
+#define MAX_LENGTH 1000000
+
 using namespace std;
 
 struct Travel
@@ -14,20 +18,14 @@ struct Travel
 };
 
 void stampaPercorso(ofstream *out, int curr);
-void initDJ(vector<pair<int, Travel>> *g);
 void DJ(vector<pair<int, Travel>> *g);
-bool allVisited();
 int peso(int currTime, Travel t);
-int waitingTime(int currTime, Travel t);
-int test();
 
+priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> q;
 int N, M;
-bool visited[1000000];
-int distanceTo[1000000];
-int pred[1000000];
-
-void prt(int *v);
-void prt(bool *v);
+bool visited[MAX_LENGTH];
+int distanceTo[MAX_LENGTH];
+int pred[MAX_LENGTH];
 
 int main()
 {
@@ -55,14 +53,16 @@ int main()
         ret.first = e;
         ret.second = travel;
 
-        g[e].push_back(go);
-        g[s].push_back(ret);
+        if (travel.travelTime <= travel.offTime)
+        {
+            g[e].push_back(go);
+            g[s].push_back(ret);
+        }
     }
 
-    initDJ(g);
     DJ(g);
 
-    bool finito = distanceTo[N - 1] != 1000000;
+    bool finito = distanceTo[N - 1] != MAX_LENGTH;
 
     ofstream out("output.txt");
     if (!finito)
@@ -86,145 +86,59 @@ void stampaPercorso(ofstream *out, int curr)
     *out << curr << endl;
 }
 
-void initDJ(vector<pair<int, Travel>> *g)
+void DJ(vector<pair<int, Travel>> *g)
 {
     for (int i = 0; i < N; i++)
     {
         visited[i] = false;
-        distanceTo[i] = 1000000;
+        distanceTo[i] = MAX_LENGTH;
         pred[i] = -1;
     }
-
-    visited[0] = true;
     distanceTo[0] = 0;
-    for (auto nearNode : g[0])
+    q.push(make_pair(0, 0));
+
+    while (!q.empty())
     {
-        distanceTo[nearNode.first] = peso(0, nearNode.second);
-        pred[nearNode.first] = 0;
-    }
-}
+        pair<int, int> next = q.top();
+        q.pop();
 
-void DJ(vector<pair<int, Travel>> *g)
-{
+        if (next.first >= MAX_LENGTH)
+            break;
 
-    int from = 0;
-    while (!allVisited())
-    {
+        //cout << "Trovata N:" << next.second << "\tDepth: " << next.first << endl;
+        //for (int i = 0; i < N; i++) cout << distanceTo[i] << "\t"; cout << endl << endl;
 
-        //cout << endl;
-        //cout << endl;
-        int minDist = 1000000;
-        int minNode = 1000000;
-        for (int i = 0; i < N; i++)
+        if (!visited[next.second])
         {
-            if (!visited[i] && distanceTo[i] < minDist)
+            visited[next.second] = true;
+            for (auto n : g[next.second])
             {
-                //cout << "--------" << i << "\t" << visited[i] << endl;
-                minDist = distanceTo[i];
-                minNode = i;
-            }
-        }
+                int alt = peso(next.first, n.second) + distanceTo[next.second];
 
-        //cout << endl;
-        //cout << "Min ditance: " << minDist << endl;
-        //cout << "Min node: " << minNode << endl;
-        //prt(distanceTo);
-        //prt(visited);
-
-        if (minDist == 1000000)
-            return;
-
-        visited[minNode] = true;
-        for (auto n : g[minNode])
-        {
-            int alt = peso(minDist, n.second);
-            if (alt < 1000000)
-                alt += distanceTo[minNode];
-
-            if (alt < distanceTo[n.first])
-            {
-                distanceTo[n.first] = alt;
-                pred[n.first] = minNode;
+                if (alt < distanceTo[n.first])
+                {
+                    pred[n.first] = next.second;
+                    distanceTo[n.first] = alt;
+                    q.push(make_pair(alt, n.first));
+                }
             }
         }
     }
-}
-
-bool allVisited()
-{
-    for (int i = 0; i < N; i++)
-        if (visited[i] == false)
-            return false;
-    return true;
 }
 
 int peso(int currTime, Travel t)
 {
-    int w = waitingTime(currTime, t);
-    if (w < 1000000)
-        w += t.travelTime;
-    return w;
-}
-
-int waitingTime(int currTime, Travel t)
-{
     if (t.travelTime > t.offTime)
-        return 1000000;
+        return MAX_LENGTH;
 
     if (currTime <= t.firstOff)
-        return t.firstOff - currTime;
+        return (t.firstOff - currTime) + t.travelTime;
 
     int intervalLength = (t.offTime + t.onTime);
     int timeInInterval = (currTime - t.firstOff) % intervalLength;
 
-    int res;
-    if (timeInInterval >= t.offTime) //Is in on time, waiting for next off
-    {
-        res = intervalLength - timeInInterval;
-    }
-    else // Off time
-    {
-        if (intervalLength - t.onTime - timeInInterval >= t.travelTime) // Is off, can make it in time
-            res = 0;
-        else //Waiting next interval
-            res = intervalLength - timeInInterval;
-    }
+    if (!(timeInInterval >= t.offTime) && (intervalLength - t.onTime - timeInInterval >= t.travelTime))
+        return t.travelTime;
 
-    return res;
-}
-
-int test()
-{
-    Travel t;
-    cout << "Traveling time:\t";
-    cin >> t.travelTime;
-    cout << "First Off:\t";
-    cin >> t.firstOff;
-    cout << "Off Time:\t";
-    cin >> t.offTime;
-    cout << "On Time:\t";
-    cin >> t.onTime;
-
-    int currTime = 0;
-    while (currTime != -1)
-    {
-        cout << "Current time:\t";
-        cin >> currTime;
-        int res = waitingTime(currTime, t);
-        cout << "Result:\t\t\t" << res << endl;
-    }
-}
-
-void prt(int *v)
-{
-    for (int i = 0; i < N; i++)
-        cout << v[i] << "\t";
-    cout << endl;
-}
-
-void prt(bool *v)
-{
-    for (int i = 0; i < N; i++)
-        cout << v[i] << "\t";
-    cout << endl;
+    return (intervalLength - timeInInterval) + t.travelTime;
 }
