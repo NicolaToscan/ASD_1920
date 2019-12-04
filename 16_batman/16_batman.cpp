@@ -6,8 +6,6 @@
 #include <queue>
 #include <stack>
 
-#define MAX_LENGTH 1000000
-
 using namespace std;
 
 int N, M;
