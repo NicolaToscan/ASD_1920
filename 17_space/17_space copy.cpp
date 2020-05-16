@@ -133,28 +133,37 @@ void marchia2(vector<int> *g)
     out << endl;
 }
 
-int counter = 0;
 void findArticulations(vector<int> *g, int n, bool *visited, int *discovered, int *low, int *parent)
 {
-    discovered[n] = counter;
-    low[n] = counter;
-    counter++;
-    for (int v : g[n])
+    static int depth = 0;
+    int children = 0;
+
+    depth++;
+
+    visited[n] = true;
+    discovered[n] = depth;
+    low[n] = depth;
+
+    for (int near : g[n])
     {
-        if (grafo[vicino].num == -1)
+        if (!visited[near])
         {
-            dfs(v, n, visited, discovered, low, parent);
-            grafo[n].low = min(g[n].low, grafo[vicino].low);
-            if (node == 0)
-            {
-                if (i != 0)
-                    grafo[0].articulation = true;
-            }
-            else if (grafo[vicino].low >= grafo[node].num)
-                grafo[node].articulation = true;
+            children++;
+            parent[near] = n;
+            findArticulations(g, near, visited, discovered, low, parent);
+
+            low[n] = min(low[near], low[n]);
+
+            if (parent[n] == -1 && children > 1)
+                isArt[n] = true;
+
+            if (parent[n] != -1 && low[near] >= discovered[n])
+                isArt[n] = true;
         }
-        else if (vicino != father)
-            grafo[node].low = min(grafo[node].low, grafo[vicino].low);
+        else if (near != parent[n])
+        {
+            low[n] = min(low[near], discovered[n]);
+        }
     }
 }
 
